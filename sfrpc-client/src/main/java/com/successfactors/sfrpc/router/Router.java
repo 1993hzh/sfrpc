@@ -7,5 +7,5 @@ import com.successfactors.sfrpc.connection.Connection;
  */
 public interface Router {
 
-  Connection route();
+  Connection route(String serviceName);
 }

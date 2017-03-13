@@ -12,9 +12,11 @@ public abstract class AbstractServiceConsumer implements ServiceConsumer {
   protected final static Logger log = LogManager.getLogger(AbstractServiceConsumer.class);
 
   protected Router router;
+  protected String serviceName;
 
-  public AbstractServiceConsumer(Router router) {
+  public AbstractServiceConsumer(Router router, String serviceName) {
     this.router = router;
+    this.serviceName = serviceName;
   }
 
 }

@@ -1,19 +1,22 @@
 package com.successfactors.sfrpc;
 
-import com.successfactors.sfrpc.message.Message;
+import com.successfactors.sfrpc.connection.ConnectionAware;
+import com.successfactors.sfrpc.message.Invocation;
 
 /**
  * Created by I322901 on 2/18/2017.
  */
-public interface ServiceProvider {
+public interface ServiceProvider extends ConnectionAware {
 
-  void initialize();
+  int PORT = 9000;
 
-  void register(Class serviceInterface, Class serviceImplement);
+  void init();
 
-  void receive(Message message);
+  Object receive(Invocation invocation) throws Throwable;
 
-  void tearDown();
+  void run();
+
+  void stop();
 
   boolean isAvailable();
 }
