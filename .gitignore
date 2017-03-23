@@ -36,3 +36,8 @@ sfrpc-station/gradle/
 sfrpc-station/gradlew
 sfrpc-station/gradlew.bat
 /.idea/modules/sfrpc-api_main.iml
+/sfrpc-testbase/sfrpc-testbase.iml
+sfrpc-api/build/
+sfrpc-client/build/
+sfrpc-server/build/
+sfrpc-station/build/
